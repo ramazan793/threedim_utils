@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store
+
+# Agent scaffolding — never commit
+CLAUDE.md
+**/CLAUDE.md
+
+# FLAME 2020 model data — license-restricted, NOT redistributed.
+# Fetch FLAME 2020 from https://flame.is.tue.mpg.de/ and place per README "FLAME assets".
+**/FLAME.pkl
+F_flame_plus.pt
+V_flame_plus.pt
+W_flame_plus.pt
