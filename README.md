@@ -20,19 +20,13 @@ Of Real-time Animatable 3D Gaussian Head Avatars*. AGORA clones this repo into i
 
 ## FLAME assets (NOT included — license-restricted)
 
-The actual FLAME 2020 model files are **not committed** here: the
-[FLAME license](https://flame.is.tue.mpg.de/modellicense.html) forbids redistribution. Download FLAME
-2020 from the official site — <https://flame.is.tue.mpg.de/> — then obtain/derive the following files and
-place them at these paths inside the repo:
+`assets/flame_with_mouth_no_backhead_v3/FLAME.pkl` is FLAME 2020 with a mouth-interior mesh added and the
+back of the head removed. It is derived from FLAME, so the
+[FLAME license](https://flame.is.tue.mpg.de/modellicense.html) forbids redistributing it. Download FLAME 2020
+from <https://flame.is.tue.mpg.de/> and build it:
 
-```
-assets/
-  flame_with_mouth_no_backhead_v3/FLAME.pkl    # required by AGORA (use_flame_template_with_mouth)
-  flame_with_mouth_no_backhead_v2/FLAME.pkl    # v2 variant
-  F_flame_plus.pt                              # FLAME faces / topology
-  V_flame_plus.pt                              # FLAME template vertices
-  W_flame_plus.pt                              # FLAME LBS skinning weights
+```bash
+python build_flame_with_mouth.py /path/to/FLAME2020/generic_model.pkl   # default: ../smirk/assets/FLAME2020/generic_model.pkl
 ```
 
-Everything else (UV masks, `uv_to_3d__vert_idx_mapping.pt`, stretched-UV / no-backhead templates) is
-already included in this repo.
+This reproduces the pickle the AGORA checkpoints were trained with. All other assets are included.
